@@ -1,0 +1,11 @@
+mpi:
+
+compile: mpicc jacobiPictureMPI.c -o jacobiPictureMPI -lm
+run: mpirun --oversubscribe -np 4 ./jacobiPictureMPI <epsilon> <max iterations>
+
+gcc:
+
+compile: gcc jacobiPictureSerial.c -o jacobiPictureSerial -lm
+run: ./jacobiPictureSerial <epsilon> <max iterations>
+
+for project, use .01 epsilon and 1,000,000 iterations
